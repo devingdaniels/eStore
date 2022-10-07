@@ -28,12 +28,12 @@ function App() {
           <article>
           <Route path="/" exact>
               <HomePage/>
+            </Route>            
+            <Route path="/orderPage">
+              <OrderPage items={items}/>
             </Route>
             <Route path="/storePage">
-              <StoresPage/>
-            </Route>
-            <Route path="/orderPage">
-              <OrderPage/>
+              <StoresPage stores={stores}/>
             </Route>
           </article>
         </main>
@@ -41,7 +41,6 @@ function App() {
         <footer>
           <Footer/>
         </footer>
-
       </Router>
   );
 }
