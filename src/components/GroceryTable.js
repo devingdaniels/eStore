@@ -1,12 +1,13 @@
 import React from "react";
 import GroceryRow from './GroceryRow'
 
+
 function GroceryTable({items}){
     return (
         <>
-            <h1>This is where the grocery table will go</h1>
+            <h1>Groceries</h1>
             <table>
-                <caption>This is a table</caption>
+                <caption>Add items to your cart here</caption>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -16,7 +17,7 @@ function GroceryTable({items}){
                 </thead>
                 <tbody>
                     {items.map((item, i)=> <GroceryRow item={item} key={i}/>)}
-                </tbody>
+                </tbody>   
             </table>
         </>
     )

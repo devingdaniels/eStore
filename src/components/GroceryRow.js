@@ -6,7 +6,7 @@ function GroceryRow({item}){
         <tr>
             <td>{item.name}</td>
             <td>{item.price}</td>
-            <td><SelectQuantity/></td>
+            <td><SelectQuantity item={item}/></td>
         </tr>
     )
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import GroceryTable from "../components/GroceryTable";
+import GroceryTable from "../components/GroceryTable"
 
 
 function OrderPage({items}){
