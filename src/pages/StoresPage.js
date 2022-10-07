@@ -5,10 +5,10 @@ import ZipSearch from '../components/ZipSearch'
 function StoresPage({stores} ){
     return (
         <>
-        <h2>Hello from test in Store pages</h2>
-        <p>Some paragrpah info here...</p>
+        <h2>Welcome to the Store Page</h2>
+        <p>Here is a list of available stores. Use the  </p>
         <StoreTable stores={stores}/>
-        <ZipSearch/>
+        <ZipSearch stores={stores}/>
         </>
     )
 }

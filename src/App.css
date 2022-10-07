@@ -36,7 +36,9 @@ body {       /* Can alternatively define in html {} or :root {} */
   background-color:;
   font-family:;
   font-size:;
-  margin:;
+  margin: auto;
+  width: 80%;
+  text-align: center;
   padding:;
 }
 
@@ -109,6 +111,7 @@ ins {}
 table {
    /* remove double borders on table */
   border-collapse: collapse;
+  margin: auto;
 }
 caption {}
 thead {}
