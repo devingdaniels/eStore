@@ -8,7 +8,7 @@ function GroceryRow({item, total}){
 
     return (
         <tr>
-            <td>{item.name}</td>
+            <td className="tableNameItem">{item.name}</td>
             <td>{item.price}</td>
             <td><SelectQuantity item={item} total={total} getQuantity={getQuantity}/></td> 
             <td>{quantity}</td>

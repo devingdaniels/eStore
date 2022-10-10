@@ -20,15 +20,22 @@ function ZipSearch( {stores }){
     )
 }
 
-function handleSubmit(e, stores,zipCode ){
- // Check if the user zipCode is in the stores object
+function handleSubmit(e, stores, zipCode ){
+    // Prevent new page load, not actually submitting form
+    e.preventDefault()
+    // Check for empty string
+    if (zipCode === ''){
+        alert("Please enter a valid zip")
+        return
+    }
+    // Check if the user zipCode is in the stores object
     const result = isInStores(stores, zipCode)
      if (result === true){
         alert(`Your zip code, ${zipCode}, is within the order range! :)`)
         }else {
              alert(`Your zip code, ${zipCode}, is outside the order range! :(`)
         }
-    e.preventDefault()
+    
 }
 
 function isInStores(stores, zip){

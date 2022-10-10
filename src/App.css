@@ -7,13 +7,13 @@
         
 /*   ----- Variables  -----  */
 :root {
-  --custom-color-name:;
-  --custom-embellishment-name:;
+  --headerFooterBackground: #023453;
 }
 *{
   margin: 0;
   padding: 0;
 }
+
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
 body {       /* Can alternatively define in html {} or :root {} */
   color: rgb(48, 204, 126);
@@ -21,19 +21,9 @@ body {       /* Can alternatively define in html {} or :root {} */
   font-family: 'Lato';
   font-size: 1.5em;
   margin: 0 auto 0 auto;
-  width: 90%;
   text-align: center;
   padding: .1%;
 }
-
-/* ----- Anchors ----- Text links */
-a {
- 
-}
-a:link {}
-a:hover {}
-a:active {}
-a:visited {}
 
 /*  ----- Navigation ----- Override text links for navigation only.  */
 nav {
@@ -42,10 +32,11 @@ nav {
   justify-content: center;  
 }
 nav a {
+  background-color: rgb(0, 2, 93);
   color:  rgb(27, 236, 13);
   border: 2px solid  rgb(27, 236, 13);
-  text-decoration: none;
-  background-color: rgb(0, 2, 93);
+  font-size: 1.2em;
+  text-decoration: none;  
   padding: 3%;
   border-radius: 10%;
 }
@@ -56,68 +47,38 @@ nav a:hover{
 
 /*  ----- Page layout blocks -----  */
 header {
+  background-color:var(--headerFooterBackground);
+  border-bottom: 3px solid black;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  
+  margin: 0;
 }
-main {}
-section {}
-  article {}
-    #topic1 {}
-    #topic2 {}
-    #gallery1 {}
-    #gallery2 {}
-div {}
-aside {}
+header .slogan{
+  font-size: .5em;
+}
+
+main {
+  background-color: rgb(186, 171, 227);
+  color:rgb(28, 14, 179);
+  padding: 1em;
+}
+
 footer { 
-  margin: 1em 0
+  padding: 1em 0;
+  background-color:var(--headerFooterBackground);
+  border-bottom: 1px solid white;
+  padding: 10px;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
 }
 
 /*  -----  Typography  ----- */
 p {
-  margin: 1em 0;
+  padding: 1em 0;
 }
-br {}
-ol, ul, dl {}
-li {}
-dt {}
-dd {}
-
-h1, h2, h3, h4, h5, h6 {} /* Define consistent font family.*/
-h1 {
- 
-}
-h2 { margin: 1em 0}
-h3 {}
-h4 {}
-h5 {}
-h6 {}
-
-abbr {}
-acronym {}
-address {}
-blockquote {}
-  q {}
-  cite {}
-em {}
-hr {}
-mark {}
-s {}
-span {}
-strong {}
-sub {}
-sup {}
-time {}
-
-/*  ----- Coding or instructional typography ----- */
-pre {}
-code {}
-kbd {}
-samp {}
-var {}
-del {} 
-ins {}
+h2 { padding: 1em 0}
 
 /*  ----- Table ----- */
 table {
@@ -125,62 +86,49 @@ table {
   border-collapse: collapse;
   margin: auto;
   width: 80%;
+  line-height: 2em;
 }
 caption {
   font-weight: 700;
 }
-thead {}
-tbody {}
-tfoot {}
-tr {}
-  tr:nth-child(even) {}
-th {}
-td {}
-  td:nth-child(1) {}
-colgroup {}
-data {}
-datalist {}
+tr, th, td {
+  padding: 10px;
+}
 
+tr {
+  border: 1px solid black;
 
+}
+th {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+td {
+  border: 1px solid black;
+}
 /*  ----- Form ----- */
 form {
-  margin: 1em 0;
+  padding: 1em 0;
 }
 fieldset {
   border: none;
 }
   legend {
-    margin: 1em 0;
+    padding: 1em 0;
   }
-label {}
-  button {}
-  input {}
-  output {}
-  meter {}
-  progress {}
-  select {}
-    optgroup {}
-    option {}
-  textarea {}
-
-/* ----- Media ----- */
-figure {}
-  figcaption {}
-img {}
-svg {}
-picture {}
-  source {}
-iframe {}
-video {}
-audio {}
-embed {}
-object {}
-
-
+  input {
+    padding: 10px;
+    font: bold;
+  }
+ 
 /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
-.slogan{
-  font-size: .5em;
+.homePage{
+  height: 55.8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 .zipSearchContainer{
   display: flex;
   align-items: center;
@@ -199,8 +147,19 @@ object {}
   text-align: center;
   user-select: none;
 }
-.updateQuantity{
+.updateQuantityContainer{  
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: space-evenly;
+}
+.updateQuantButton:hover{
+  color: rgb(135, 227, 129);
   cursor: pointer;
+}
+
+.tableNameItem{
+  text-align: start;
 }
 
 

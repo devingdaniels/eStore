@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function StoreRow({store}){
     return (
         <tr>
@@ -10,6 +9,5 @@ function StoreRow({store}){
         </tr>
     )
 }
-
 
 export default StoreRow

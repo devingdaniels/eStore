@@ -1,7 +1,9 @@
 import './App.css';
+import React from 'react';
+
+// Static app data objects
 import stores from './data/stores';
 import items from './data/items';
-import React from 'react';
 
 // Import Router and Route for serving SPA
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -26,7 +28,7 @@ function App() {
         </header>        
         <main>
           <article>
-          <Route path="/" exact>
+            <Route path="/" exact>
               <HomePage/>
             </Route>            
             <Route path="/orderPage">
@@ -37,7 +39,6 @@ function App() {
             </Route>
           </article>
         </main>
-
         <footer>
           <Footer/>
         </footer>

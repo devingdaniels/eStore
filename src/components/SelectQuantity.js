@@ -23,11 +23,11 @@ function SelectQuantity({total,getQuantity}){
             getQuantity(quantity - 1)
         }
     }
-    return (
-        <>
-            <AiFillMinusCircle className="updateQuantity" onClick={decrement}/>
-            <AiFillPlusCircle className="updateQuantity" onClick={increment}/>        
-        </>
+    return (        
+        <div className="updateQuantityContainer">
+            <AiFillMinusCircle className="updateQuantButton" onClick={decrement}/>
+            <AiFillPlusCircle className="updateQuantButton" onClick={increment}/>
+        </div>             
     )    
 }
 

@@ -1,5 +1,7 @@
 import React, {useState} from "react";
+// Components
 import GroceryRow from './GroceryRow'
+import Totals from "./Totals";
 
 
 function GroceryTable({items}){
@@ -10,9 +12,9 @@ function GroceryTable({items}){
 
     return (
         <>
-            <h1>Groceries</h1>
+            <h1>Groceries</h1>            
             <table>
-                <caption>Add items to your cart here</caption>
+                <caption>Select Items</caption>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -25,7 +27,7 @@ function GroceryTable({items}){
                     {items.map((item, i)=> <GroceryRow item={item} total={updateTotalItems} key={i}/>)}
                 </tbody>   
             </table>
-            
+            <Totals total={totalItems}/>
         </>
     )
 }
