@@ -6,7 +6,7 @@ function StoresPage({stores} ){
     return (
         <>
         <h2>Welcome to the Store Page</h2>
-        <p>Here is a list of available stores. Use the  </p>
+        <p>Use the search to see if there is a store near you.</p>
         <StoreTable stores={stores}/>
         <ZipSearch stores={stores}/>
         </>

@@ -1,38 +1,35 @@
 import React, {useState} from "react";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 
-
-// Before refactoring, this was set up to handle two props in state
-// Code could be simpler, but this is to remind for how to handle objects in state 
-
-function SelectQuantity(){
-    const [state, setQuantity, ] = useState({quantity: 0})
+function SelectQuantity({total,getQuantity}){
+    const [quantity, setQuantity, ] = useState(0)
     
     const increment = () => {
-        if (state.quantity === 10){
-            setQuantity({...state, quantity: 10})
-            
+        if (quantity === 10){
+            setQuantity(10)            
         }else {
-            setQuantity(state => ({...state, quantity: state.quantity + 1}))
+            setQuantity(quantity + 1)
+            total(true)
+            getQuantity(quantity + 1)
         }
     }
 
     const decrement = () => {
-        if (state.quantity === 0){
-            setQuantity({...state, quantity: 0})
-            
+        if (quantity === 0){
+            setQuantity(0)            
         }else {
-            setQuantity(state => ({...state, quantity: state.quantity - 1}))
+            setQuantity(quantity - 1 )
+            total(false)
+            getQuantity(quantity - 1)
         }
     }
-
     return (
         <>
-            <AiFillMinusCircle onClick={decrement}/>
-            <AiFillPlusCircle onClick={increment}/>
-            <span>{state.quantity}</span>          
+            <AiFillMinusCircle className="updateQuantity" onClick={decrement}/>
+            <AiFillPlusCircle className="updateQuantity" onClick={increment}/>        
         </>
     )    
 }
+
 
 export default SelectQuantity

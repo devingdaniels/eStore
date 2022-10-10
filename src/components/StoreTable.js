@@ -5,7 +5,7 @@ function StoreTable({stores}){
     return (
         <>
             <table>
-                <caption>This is a table</caption>
+                <caption>Available Stores</caption>
                 <thead>
                     <tr>
                         <th>City</th>

@@ -2,10 +2,11 @@ import React from "react";
 
 function Header(){
     return(
-        <>
-            <h1>Emarket, Inc</h1>
-            <p>My First React App: An online shopping store</p>   
-        </>
+        
+        <div>
+            <h1>eStore</h1>
+            <p className="slogan"> <i>eDelivered in 5 seconds or less</i> </p>   
+        </div>
     )
 }
 
