@@ -1,10 +1,22 @@
 /*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
 /*  ===== See tablet, desktop, and print @media queries at the bottom. */
 
+
 /*   ----- Imports  -----  */
+          /* Add fonts from the app's server 
+@font-face {                
+  font-family: 'FontName';
+  src: url('FontName.woff2') format('woff2');
+} 
+          */                           
+
+          /* ...or hosted services like Google Fonts 
+@import url(//fonts.googleapis.com/css?family=Font+Name);
+          */
 @import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Lato:ital,wght@0,900;1,700;1,900&family=Roboto:ital,wght@1,900&display=swap');
 @import '../node_modules/modern-normalize/modern-normalize.css';
-        
+
+/*   ----- Variables  -----  */     
 /*   ----- Variables  -----  */
 :root {
   --headerFooterBackground: #023453;
@@ -15,15 +27,25 @@
 }
 
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
-body {       /* Can alternatively define in html {} or :root {} */
-  color: rgb(48, 204, 126);
+/* Can alternatively define in html {} or :root {} */
+body {  
   background-color: rgb(78, 78, 78);
+  color: rgb(48, 204, 126);  
   font-family: 'Lato';
   font-size: 1.5em;
   margin: 0 auto 0 auto;
   text-align: center;
   padding: .1%;
+
 }
+
+
+/* ----- Anchors ----- Text links */
+a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {}
 
 /*  ----- Navigation ----- Override text links for navigation only.  */
 nav {
@@ -36,24 +58,30 @@ nav a {
   color:  rgb(27, 236, 13);
   border: 2px solid  rgb(27, 236, 13);
   font-size: 1.2em;
+  font-weight: 100;
   text-decoration: none;  
   padding: 3%;
   border-radius: 10%;
+  line-height: 1.5em;
+  margin: .1px;
 }
 
 nav a:hover{
-  color:  rgb(248, 10, 10);
+  color:  rgb(219, 17, 219);
 }
 
 /*  ----- Page layout blocks -----  */
 header {
   background-color:var(--headerFooterBackground);
+  color:rgb(27, 236, 13);
   border-bottom: 3px solid black;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin: 0;
+  font-size: 1.5em;
+  font-weight: 800;
 }
 header .slogan{
   font-size: .5em;
@@ -62,53 +90,115 @@ header .slogan{
 main {
   background-color: rgb(186, 171, 227);
   color:rgb(28, 14, 179);
+  border: 4px solid rgb(113, 6, 167);
   padding: 1em;
 }
 
+section {}
+  article {}
+    #topic1 {}
+    #topic2 {}
+    #gallery1 {}
+    #gallery2 {}
+div {}
+aside {}
 footer { 
-  padding: 1em 0;
   background-color:var(--headerFooterBackground);
-  border-bottom: 1px solid white;
-  padding: 10px;
+  color:rgb(27, 236, 13);    
   border-top: 3px solid black;
-  border-bottom: 3px solid black;
+  padding: 1em 0;
+  font-size: .7em;
+  font-weight: 300;
+  margin: auto;
+  padding: auto;  
 }
 
 /*  -----  Typography  ----- */
 p {
   padding: 1em 0;
 }
+br {}
+ol, ul, dl {}
+li {}
+dt {}
+dd {}
+
+h1, h2, h3, h4, h5, h6 {} /* Define consistant font family.*/
+h1 {}
 h2 { padding: 1em 0}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}
 
 /*  ----- Table ----- */
 table {
-   /* remove double borders on table */
-  border-collapse: collapse;
-  margin: auto;
-  width: 80%;
-  line-height: 2em;
+  /* remove double borders on table */
+ border-collapse: collapse;
+ margin: auto;
+ width: 80%;
+ line-height: 2em;
+/* border property requirement on tr, th, td */
 }
+
 caption {
-  font-weight: 700;
+ font-weight: 700;
 }
 tr, th, td {
-  padding: 10px;
+ padding: 10px;
 }
 
 tr {
-  border: 1px solid black;
+ border: 1px solid black;
 
 }
 th {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+ border-top: 2px solid black;
+ border-bottom: 2px solid black;
 }
 td {
-  border: 1px solid black;
+ border: 1px solid black;
 }
+
+thead {}
+tbody {}
+tfoot {}
+tr:nth-child(even) {}
+td:nth-child(1) {}
+colgroup {}
+data {}
+datalist {}
+
+
 /*  ----- Form ----- */
 form {
   padding: 1em 0;
+  font-family: 'Lato';
 }
 fieldset {
   border: none;
@@ -116,11 +206,35 @@ fieldset {
   legend {
     padding: 1em 0;
   }
-  input {
-    padding: 10px;
-    font: bold;
-  }
  
+  input, button {
+    font-family: 'Lato';
+    padding: 10px;
+  }
+
+  button {}
+  output {}
+  meter {}
+  progress {}
+  select {}
+  optgroup {}
+  option {}
+  textarea {}
+
+/* ----- Media ----- */
+figure {}
+  figcaption {}
+img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
+
+
 /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
 .homePage{
   height: 55.8vh;
@@ -162,6 +276,26 @@ fieldset {
   text-align: start;
 }
 
+
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
 
 @keyframes App-logo {}
 
